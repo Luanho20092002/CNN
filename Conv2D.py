@@ -10,7 +10,7 @@ class Conv2D:
         self.isHasFilter = True
     
     def forward(self, Xin):
-        # Chuyển sang dạng đầy đủ 4 channels
+        # Chuyển sang dạng đầy đủ 4d
         if len(Xin.shape) == 2:
             Xin = Xin.reshape(1, 1, Xin.shape[0], Xin.shape[1])
         elif len(Xin.shape) == 3:
