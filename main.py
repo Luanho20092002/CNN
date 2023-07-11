@@ -39,4 +39,4 @@ md = Sequential(l1, l2, l5, l6, l7)
 md.fit(Xtrain, ytrain, batch_size=20, max_epoch=5, eta=0.1)
 
 # Score of test set
-print(md.emualate(Xtest, ytest))
+print(md.evaluate(Xtest, ytest))
