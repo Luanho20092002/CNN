@@ -25,6 +25,8 @@ ytrain = LabelBinarizer().fit_transform(ytrain)
 ytest = LabelBinarizer().fit_transform(ytest)
 
 #Train
+# Conv chỉ hỗ trợ stride = 1, stride càng lớn càng khó đạo hàm
+# Hiện tại vẫn chưa tìm được công thức chung để tính khi stride > 1
 l1 = Conv2D(kernel_size=3, filter=32, pad=1)
 l2 = MaxPooling(2, 2)
 """ l3 = Conv2D(kernel_size=3, filter=64, pad=1)
