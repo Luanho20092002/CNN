@@ -33,8 +33,8 @@ l5 = Flatten()
 l6 = Dense(512, active="relu")
 l7 = Dense(ytrain.shape[1], active="softmax")
 md = Sequential(l1, l2, l5, l6, l7)
-sgd = SGD(batch_size=20, max_epoch=5, eta=0.1, momentum=0.9)
-md.fit(Xtrain, ytrain, optimizer=sgd)
+#sgd = SGD(batch_size=20, max_epoch=5, eta=0.1, momentum=0.9)
+md.fit(Xtrain, ytrain, batch_size=20, max_epoch=5, eta=0.1)
 
 # Score of test set
 print(md.emualate(Xtest, ytest))
