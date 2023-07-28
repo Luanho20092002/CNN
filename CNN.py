@@ -2,13 +2,11 @@ from layers.Conv2D import Conv2D
 from layers.MaxPooling import MaxPooling
 from layers.Flatten import Flatten
 from layers.Dense import Dense
-from optimizer.Adam import Adam
-from optimizer.SGD import SGD
-from optimizer.GD import GD
-from optimizer.RMSProp import RMSProp
+from optimizers.Adam import Adam
+from optimizers.SGD import SGD
+from optimizers.RMSProp import RMSProp
 from sklearn.preprocessing import LabelBinarizer
 from Sequential import Sequential
-from keras.datasets import mnist
 import os, cv2, numpy as np, matplotlib.pyplot as plt
 
 np.set_printoptions(4, suppress=True)
@@ -16,7 +14,7 @@ np.set_printoptions(4, suppress=True)
 data = []
 X_train, y_train =  [], []
 folder = ['4', '7', '11', '15']
-people = ["Ribi", "Suboi", "Phạm Huy Hoàng", "Mai Phương Thúy"]
+people = ["Ribi", "Suboi", "Phạm Huy Hoàng", "Mai Phương Thúy"] #Name of the popular Vietnamese people
 
 for f in folder:
     path = "./dataset/VN-celeb/" + f
