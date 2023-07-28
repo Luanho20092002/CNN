@@ -17,7 +17,7 @@ folder = ['4', '7', '11', '15']
 people = ["Ribi", "Suboi", "Phạm Huy Hoàng", "Mai Phương Thúy"] #Name of the popular Vietnamese people
 
 for f in folder:
-    path = "./dataset/VN-celeb/" + f
+    path = "./dataset/VN-Celeb/" + f
     for filename in os.listdir(path):
         file_path = path + '/' + filename
         img = cv2.imread(file_path, 0)
